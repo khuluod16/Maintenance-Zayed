@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0171)file:///C:/Users/Khuloud.Alnaour/Downloads/%D9%85%D9%86%D8%B5%D8%A9_%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D9%85%D8%AC%D9%85%D8%B9_%D8%B2%D8%A7%D9%8A%D8%AF%20(3).html -->
 <html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>منصة الصيانة – مجمع زايد التعليمي</title>
-<script src="./منصة الصيانة – مجمع زايد التعليمي_files/chart.umd.min.js.download"></script>
-<script src="./منصة الصيانة – مجمع زايد التعليمي_files/pdf.min.js.download"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <style>
 :root{
   --navy:#0D2137;--blue:#1565C0;--teal:#00695C;--green:#2E7D32;
@@ -716,7 +715,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
       </div>
     </div>
     <div id="qrWrap" style="text-align:center;margin-top:10px;display:none">
-      <img id="qrImg" src="file:///C:/Users/Khuloud.Alnaour/Downloads/%D9%85%D9%86%D8%B5%D8%A9_%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D9%85%D8%AC%D9%85%D8%B9_%D8%B2%D8%A7%D9%8A%D8%AF%20(3).html" style="width:160px;height:160px;border:3px solid var(--navy);border-radius:8px">
+      <img id="qrImg" src="" alt="رمز QR لرابط البلاغات" style="width:160px;height:160px;border:3px solid var(--navy);border-radius:8px">
       <p style="font-size:11px;color:var(--g3);margin-top:6px">امسح الكود بالكاميرا لفتح نموذج الإبلاغ</p>
     </div>
   </div>
@@ -793,7 +792,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 
 <!-- LIGHTBOX -->
 <div class="lb" id="lb" onclick="this.classList.remove(&#39;on&#39;)">
-  <img id="lbImg" src="file:///C:/Users/Khuloud.Alnaour/Downloads/%D9%85%D9%86%D8%B5%D8%A9_%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D9%85%D8%AC%D9%85%D8%B9_%D8%B2%D8%A7%D9%8A%D8%AF%20(3).html" alt="">
+  <img id="lbImg" src="" alt="صورة البلاغ">
 </div>
 
 <div class="toast" id="toast"></div>
@@ -827,8 +826,7 @@ function saveToSheets(rec) {
     payload.imgs = null;
     fetch(SHEETS_URL, {
       method: 'POST',
-      body: JSON.stringify(payload),
-      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify(payload)
     })
     .then(function(r){ return r.json(); })
     .then(function(result){
@@ -907,8 +905,7 @@ function uploadAllToSheets() {
     payload.imgs = null;
     fetch(SHEETS_URL, {
       method: 'POST',
-      body: JSON.stringify(payload),
-      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify(payload)
     })
     .then(function(r){ return r.json(); })
     .then(function(result){
@@ -1676,14 +1673,14 @@ function copyLink(){
 }
 function shareWA(){
   const link=location.href.split('?')[0]+'?mode=reporter';
-  const msg=encodeURIComponent('رابط إضافة بلاغات الصيانة – مجمع زايد التعليمي:
-'+link);
+  const msg=encodeURIComponent(`رابط إضافة بلاغات الصيانة – مجمع زايد التعليمي:
+${link}`);
   window.open('https://wa.me/?text='+msg,'_blank');
 }
 function shareEmail(){
   const link=location.href.split('?')[0]+'?mode=reporter';
-  window.location.href='mailto:?subject=نموذج بلاغات الصيانة – مجمع زايد&body='+encodeURIComponent('الرابط:
-'+link);
+  window.location.href='mailto:?subject=نموذج بلاغات الصيانة – مجمع زايد&body='+encodeURIComponent(`الرابط:
+${link}`);
 }
 function genQR(){
   const link=location.href.split('?')[0]+'?mode=reporter';
@@ -1771,8 +1768,7 @@ async function uploadAllToSheets() {
       const payload = {...rec, imgCount:(rec.imgs||[]).length, img:null, imgs:null};
       const resp = await fetch(SHEETS_URL,{
         method:'POST',
-        body:JSON.stringify(payload),
-        headers:{'Content-Type':'application/json'}
+        body:JSON.stringify(payload)
       });
       const result = await resp.json();
       if(result.success) done++;
