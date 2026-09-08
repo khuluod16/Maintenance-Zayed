@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0171)file:///C:/Users/Khuloud.Alnaour/Downloads/%D9%85%D9%86%D8%B5%D8%A9_%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D9%85%D8%AC%D9%85%D8%B9_%D8%B2%D8%A7%D9%8A%D8%AF%20(3).html -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>منصة الصيانة – مجمع زايد التعليمي</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="./منصة الصيانة – مجمع زايد التعليمي_files/chart.umd.min.js.download"></script>
+<script src="./منصة الصيانة – مجمع زايد التعليمي_files/pdf.min.js.download"></script>
 <style>
 :root{
   --navy:#0D2137;--blue:#1565C0;--teal:#00695C;--green:#2E7D32;
@@ -326,17 +326,17 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
   </div>
   <div class="bar-right">
     <span class="pill pill-blue" id="totalPill">0 بلاغ</span>
-    <span class="pill pill-red"  id="critPill">0 حرجة</span>
+    <span class="pill pill-red" id="critPill">0 حرجة</span>
     <span class="pill pill-green" id="donePill">0 منجز</span>
   </div>
 </div>
 
 <!-- TABS -->
 <div class="tabs">
-  <div class="tab active" onclick="switchTab('records')">📋 سجل البلاغات</div>
-  <div class="tab" onclick="switchTab('analytics')">📊 الإحصائيات والرسوم البيانية</div>
-  <div class="tab" onclick="switchTab('pdf')">📄 رفع PDF وتحليل الصور</div>
-  <div class="tab" onclick="switchTab('share')">📤 المشاركة والإرسال</div>
+  <div class="tab active" onclick="switchTab(&#39;records&#39;)">📋 سجل البلاغات</div>
+  <div class="tab" onclick="switchTab(&#39;analytics&#39;)">📊 الإحصائيات والرسوم البيانية</div>
+  <div class="tab" onclick="switchTab(&#39;pdf&#39;)">📄 رفع PDF وتحليل الصور</div>
+  <div class="tab" onclick="switchTab(&#39;share&#39;)">📤 المشاركة والإرسال</div>
 </div>
 
 <!-- ══ PAGE 1: RECORDS ════════════════════════════════════════════════════ -->
@@ -350,10 +350,10 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
   <!-- Period quick filter -->
   <div style="color:#90CDF4;font-size:10px;font-weight:600;margin-bottom:4px">الفترة الزمنية</div>
   <div class="period-btns">
-    <div class="pb active" onclick="setPeriod('all',this)">الكل</div>
-    <div class="pb" onclick="setPeriod('today',this)">اليوم</div>
-    <div class="pb" onclick="setPeriod('week',this)">أسبوع</div>
-    <div class="pb" onclick="setPeriod('month',this)">شهر</div>
+    <div class="pb active" onclick="setPeriod(&#39;all&#39;,this)">الكل</div>
+    <div class="pb" onclick="setPeriod(&#39;today&#39;,this)">اليوم</div>
+    <div class="pb" onclick="setPeriod(&#39;week&#39;,this)">أسبوع</div>
+    <div class="pb" onclick="setPeriod(&#39;month&#39;,this)">شهر</div>
   </div>
 
   <div class="fi"><label>البحث</label>
@@ -412,7 +412,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 <div class="main">
   <div class="toolbar">
     <button class="btn btn-blue" onclick="openAdd()">➕ إضافة بلاغ</button>
-    <button class="btn btn-purple" onclick="switchTab('pdf')">📄 رفع PDF</button>
+    <button class="btn btn-purple" onclick="switchTab(&#39;pdf&#39;)">📄 رفع PDF</button>
     <button class="btn" style="background:#0F766E;color:#fff" onclick="loadFromSheets()">🔄 مزامنة Sheets</button>
     <button class="btn" id="uploadAllBtn" style="background:#7C3AED;color:#fff" onclick="uploadAllToSheets()">☁️ رفع الكل لـ Sheets</button>
     <button class="btn btn-green" onclick="expCSV()">⬇ تصدير CSV</button>
@@ -448,10 +448,10 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 <div class="page" id="page-analytics">
 <div class="analytics-page">
   <div class="period-headline">
-    <div class="ph active" onclick="setAnPeriod('all',this)">📅 كل الأوقات</div>
-    <div class="ph" onclick="setAnPeriod('today',this)">اليوم</div>
-    <div class="ph" onclick="setAnPeriod('week',this)">هذا الأسبوع</div>
-    <div class="ph" onclick="setAnPeriod('month',this)">هذا الشهر</div>
+    <div class="ph active" onclick="setAnPeriod(&#39;all&#39;,this)">📅 كل الأوقات</div>
+    <div class="ph" onclick="setAnPeriod(&#39;today&#39;,this)">اليوم</div>
+    <div class="ph" onclick="setAnPeriod(&#39;week&#39;,this)">هذا الأسبوع</div>
+    <div class="ph" onclick="setAnPeriod(&#39;month&#39;,this)">هذا الشهر</div>
   </div>
 
   <!-- KPI Row -->
@@ -504,11 +504,8 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 <div class="main">
   <h2 style="font-size:15px;color:var(--navy);margin-bottom:14px">📄 رفع PDF وتحليل الصور تلقائياً</h2>
 
-  <div class="pdf-zone" id="pdfZone" onclick="g('pdfFile').click()"
-       ondrop="pdfDrop(event)" ondragover="e=>e.preventDefault()"
-       ondragleave="g('pdfZone').classList.remove('drag')"
-       ondragover="g('pdfZone').classList.add('drag');event.preventDefault()">
-    <input type="file" id="pdfFile" accept=".pdf,image/*" multiple onchange="handlePDF(event)">
+  <div class="pdf-zone" id="pdfZone" onclick="g(&#39;pdfFile&#39;).click()" ondrop="pdfDrop(event)" ondragover="e=&gt;e.preventDefault()" ondragleave="g(&#39;pdfZone&#39;).classList.remove(&#39;drag&#39;)">
+    <input type="file" id="pdfFile" accept=".pdf,image/*" multiple="" onchange="handlePDF(event)">
     <div class="pzi">📄</div>
     <p><strong>انقر لرفع ملف PDF أو صور متعددة</strong></p>
     <p style="margin-top:4px">سيتم استخراج الصور وتحليلها وتحديد مستوى الخطورة تلقائياً</p>
@@ -535,7 +532,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 <!-- ADD/EDIT MODAL -->
 <div class="ov" id="addModal">
 <div class="modal">
-  <div class="mh"><h2 id="mTitle">➕ إضافة بلاغ</h2><button class="mx" onclick="clM('addModal')">✕</button></div>
+  <div class="mh"><h2 id="mTitle">➕ إضافة بلاغ</h2><button class="mx" onclick="clM(&#39;addModal&#39;)">✕</button></div>
   <div class="mb">
     <div class="fg2">
       <div class="slbl">📋 معلومات البلاغ</div>
@@ -583,14 +580,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
       <div class="slbl">📸 الصور (يمكن إضافة أكثر من صورة)</div>
       <div class="fg full">
         <div class="img-gallery" id="f_gallery">
-          <div class="add-img-btn" onclick="g('f_img').click()"
-               ondrop="imgDropM(event)" ondragover="e=>{e.preventDefault()}">
+          <div class="add-img-btn" onclick="g(&#39;f_img&#39;).click()" ondrop="imgDropM(event)" ondragover="e=&gt;{e.preventDefault()}">
             <span>📷</span>
             <span style="font-size:9px;margin-top:2px">إضافة صورة</span>
           </div>
         </div>
-        <input type="file" id="f_img" accept="image/*" capture="environment"
-          multiple style="display:none" onchange="addModalImgs(event)">
+        <input type="file" id="f_img" accept="image/*" capture="environment" multiple="" style="display:none" onchange="addModalImgs(event)">
         <p style="font-size:10px;color:var(--g3);margin-top:5px">
           💡 اسحب الصور هنا أو انقر لاختيار صور من الهاتف أو الحاسوب (حتى 10 صور)
         </p>
@@ -598,7 +593,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
     </div>
   </div>
   <div class="mf">
-    <button class="btn btn-out" onclick="clM('addModal')">إلغاء</button>
+    <button class="btn btn-out" onclick="clM(&#39;addModal&#39;)">إلغاء</button>
     <button class="btn btn-blue" onclick="saveRec()">💾 حفظ البلاغ</button>
   </div>
 </div>
@@ -607,9 +602,9 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 <!-- VIEW MODAL -->
 <div class="ov" id="viewModal">
 <div class="modal">
-  <div class="mh"><h2>🔍 تفاصيل البلاغ</h2><button class="mx" onclick="clM('viewModal')">✕</button></div>
+  <div class="mh"><h2>🔍 تفاصيل البلاغ</h2><button class="mx" onclick="clM(&#39;viewModal&#39;)">✕</button></div>
   <div class="mb" id="viewB"></div>
-  <div class="mf"><button class="btn btn-out" onclick="clM('viewModal')">إغلاق</button></div>
+  <div class="mf"><button class="btn btn-out" onclick="clM(&#39;viewModal&#39;)">إغلاق</button></div>
 </div>
 </div>
 
@@ -625,8 +620,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
     <!-- Link Box -->
     <div style="background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh)">
       <h3 style="font-size:13px;color:var(--navy);margin-bottom:10px">🔗 رابط إضافة البلاغات (للموظفين)</h3>
-      <a href="https://docs.google.com/spreadsheets" target="_blank" 
-         style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;
+      <a href="https://docs.google.com/spreadsheets" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;
          padding:7px 14px;background:#0F766E;color:#fff;border-radius:7px;
          font-size:12px;font-weight:700;text-decoration:none">
         📊 فتح Google Sheets لمشاهدة كل البلاغات
@@ -635,7 +629,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
         أرسل هذا الرابط لأي موظف أو رئيس وحدة ليتمكن من إضافة بلاغ جديد مباشرة من هاتفه
       </p>
       <div class="copy-box">
-        <input type="text" id="shareLink" readonly>
+        <input type="text" id="shareLink" readonly="">
         <button onclick="copyLink()">📋 نسخ</button>
       </div>
       <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
@@ -722,7 +716,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
       </div>
     </div>
     <div id="qrWrap" style="text-align:center;margin-top:10px;display:none">
-      <img id="qrImg" src="" style="width:160px;height:160px;border:3px solid var(--navy);border-radius:8px">
+      <img id="qrImg" src="file:///C:/Users/Khuloud.Alnaour/Downloads/%D9%85%D9%86%D8%B5%D8%A9_%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D9%85%D8%AC%D9%85%D8%B9_%D8%B2%D8%A7%D9%8A%D8%AF%20(3).html" style="width:160px;height:160px;border:3px solid var(--navy);border-radius:8px">
       <p style="font-size:11px;color:var(--g3);margin-top:6px">امسح الكود بالكاميرا لفتح نموذج الإبلاغ</p>
     </div>
   </div>
@@ -733,7 +727,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
 <div class="ov" id="reporterModal">
 <div class="modal">
   <div class="mh"><h2>📱 نموذج إضافة بلاغ (للموظفين)</h2>
-    <button class="mx" onclick="clM('reporterModal')">✕</button></div>
+    <button class="mx" onclick="clM(&#39;reporterModal&#39;)">✕</button></div>
   <div class="mb">
     <div style="background:#FEF3C7;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#92400E">
       💡 هذا هو النموذج الذي سيراه الموظف عند فتح الرابط المُرسَل إليه
@@ -776,12 +770,11 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
           <div class="fg">
             <label>📸 الصور (يمكن إضافة أكثر من صورة)</label>
             <div class="img-gallery" id="rp_gallery">
-              <div class="add-img-btn" onclick="g('rp_imgInput').click()">
+              <div class="add-img-btn" onclick="g(&#39;rp_imgInput&#39;).click()">
                 <span>📷</span><span style="font-size:9px;margin-top:2px">إضافة صورة</span>
               </div>
             </div>
-            <input type="file" id="rp_imgInput" accept="image/*" capture="environment"
-              multiple style="display:none" onchange="addRpImgs(event)">
+            <input type="file" id="rp_imgInput" accept="image/*" capture="environment" multiple="" style="display:none" onchange="addRpImgs(event)">
           </div>
         </div>
       </div>
@@ -793,14 +786,14 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--off);color:#1A202C
     </div>
   </div>
   <div class="mf">
-    <button class="btn btn-out" onclick="clM('reporterModal')">إغلاق المعاينة</button>
+    <button class="btn btn-out" onclick="clM(&#39;reporterModal&#39;)">إغلاق المعاينة</button>
   </div>
 </div>
 </div>
 
 <!-- LIGHTBOX -->
-<div class="lb" id="lb" onclick="this.classList.remove('on')">
-  <img id="lbImg" src="" alt="">
+<div class="lb" id="lb" onclick="this.classList.remove(&#39;on&#39;)">
+  <img id="lbImg" src="file:///C:/Users/Khuloud.Alnaour/Downloads/%D9%85%D9%86%D8%B5%D8%A9_%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D9%85%D8%AC%D9%85%D8%B9_%D8%B2%D8%A7%D9%8A%D8%AF%20(3).html" alt="">
 </div>
 
 <div class="toast" id="toast"></div>
@@ -1800,5 +1793,6 @@ async function uploadAllToSheets() {
 fil();
 setTimeout(function(){loadFromSheets();}, 2000);
 </script>
-</body>
-</html>
+
+
+</body></html>
